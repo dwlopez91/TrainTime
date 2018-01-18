@@ -3,15 +3,17 @@
 <head>
 	<title>Train Time</title>
 	
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-	
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-	
-	<link rel="stylesheet" type="text/css" href="assets/style.css">
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+	<script src="assets/app.js"></script>
 
 </head>
 <body>
@@ -36,23 +38,29 @@
 	    </tr>
 	  </thead>
 	  <tbody>
-	    <tr>
-	      <th scope="row">1</th>
-	      <td>Mark</td>
-	      <td>Otto</td>
-	      <td>@mdo</td>
+	    <tr class="one">
+	      <th scope="row" id="name">Henry</th>
+	      <td id="destination">Minneapolis</td>
+	      <td id="frequency">3</td>
+	      <td id="nextArrival">10</td>
+	      <td id="minutesAway">4</td>
+
 	    </tr>
-	    <tr>
-	      <th scope="row">2</th>
-	      <td>Jacob</td>
-	      <td>Thornton</td>
-	      <td>@fat</td>
+	    <tr class="two">
+	      <th scope="row"></th>
+	      <<th scope="row" id="name"></th>
+	      <td id="destination"></td>
+	      <td id="frequency"></td>
+	      <td id="nextArrival"></td>
+	      <td id="minutesAway"></td>
+
 	    </tr>
-	    <tr>
-	      <th scope="row">3</th>
-	      <td>Larry</td>
-	      <td>the Bird</td>
-	      <td>@twitter</td>
+	    <tr class="three">
+	      <<th scope="row" id="name"></th>
+	      <td id="destination"></td>
+	      <td id="frequency"></td>
+	      <td id="nextArrival"></td>
+	      <td id="minutesAway"></td>
 	    </tr>
 	  </tbody>
 	</table>
@@ -65,24 +73,31 @@
 		<form>
 		  <div class="form-group">
 		    <label for="formGroupExampleInput">Train Name</label>
-		    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+		    <input type="text" class="form-control" id="trainNameInput" placeholder="Name?">
 		  </div>
 		  <div class="form-group">
 		    <label for="formGroupExampleInput2">Destination</label>
-		    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+		    <input type="text" class="form-control" id="desintationNameInput" placeholder="Where are you going?">
 		  </div>
 		  <div class="form-group">
 		    <label for="formGroupExampleInput2">First Train Time (HH:mm - military time)</label>
-		    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+		    <input type="text" class="form-control" id="firstTrainTimeInput" placeholder="First Time">
 		  </div>
 		  <div class="form-group">
 		    <label for="formGroupExampleInput2">Frequency (min)</label>
-		    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+		    <input type="text" class="form-control" id="frequencyInput" placeholder="frequency">
 		  </div>
+		  <button type="submit" class="btn btn-primary" id="addTrainButton">Submit</button>
 		</form>
 	</div>
 
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+	
+	
+
 
 </body>
 </html>
